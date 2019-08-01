@@ -11,7 +11,7 @@ main{
     background-color: $black;
     display: grid;
     grid-template-areas: ". off-canvas .";
-    grid-template-columns: 10px auto 10px;
+    grid-template-columns: 15px auto 15px;
     padding-top: 20px;
     // width of the off canvas navigation
     width: 200px;

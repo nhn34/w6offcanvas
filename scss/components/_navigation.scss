@@ -4,25 +4,42 @@
 a:hover,
 a:link {
     text-decoration: none;
-    transition: o.25s;
+    transition: 0.25s;
 }
 
-
-#off-canvas-container{
+#off-canvas-container {
     /* -------------
         Here are the properties you can changes for the off-canvas navigation-slide
     ------------- */
-
     // background-color: $black;
     // grid-template-columns: 10px auto 10px;
     // padding-top: 20px;
-
     // width of the off canvas navigation
-    // width: 200px;
+    width: 340px;
 
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input[type=text] {
+            background-color: $lightgreen;
+            font-size: rem-calc(17);
+            border: none;
+            height: 50px;
+            padding: 0px;
+            width: 80%;
+            padding-left: 5px;
+        }
 
+        button {
+            height: 50px;
+            background-color: $orange;
+            border: none;
+            width: 20%;
+        }
+    }
     /* close btn */
-    button {
+    div>button {
         background-color: transparent;
         border: none;
         color: $white;
@@ -33,41 +50,73 @@ a:link {
         transition: 0.25s;
         width: 100%;
     }
-
     /* close btn */
     button:hover {
         // color: $red;
     }
 
-    ul {
-        li {
-            a:link,
-            a:visited {
-                color: $white;
-            }
+    nav {
+        ul {
+            li {
+                text-align: right;
 
-            a:active,
-            a:hover {
-                color: $black;
+                a:link,
+                a:visited {
+                    color: $white;
+                    font-size: rem-calc(30);
+                    font-weight: 700;
+                    border-bottom: 2px solid $green;
+                    display: inline-block;
+                    padding: 20px 0;
+                    width: 100%;
+                }
+
+                a:active,
+                a:hover {
+                    color: $black;
+                    background-color: $orange;
+                }
             }
+        }
+    }
+
+    article {
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            li {
+                a:link, a:visited {
+            font-size: rem-calc(25);
+            padding: 15px 0 0 45px;
+            color: $white;
+            display: inline-block;
+        }
+        a:hover, a:active {
+            color: $orange;
+        }
+
+
+        }
         }
     }
 }
 
-
 #burger-icon {
-    background-color: $white;
+    background-color: $orange;
+    color: $white;
     border: none;
     font-size: rem-calc(18);
     outline: none;
-    padding: 8px;
+    padding: 8px 10px;
+    border-radius: 110px;
+    border: 1px solid $black;
     position: fixed;
-    right: 20px;
+    left: 20px;
     top: 20px;
     z-index: 100;
 }
 
 #burger-icon:hover {
-    background-color: $black;
-    color: $white;
+    background-color: $dark;
+    border: 1px solid $orange;
 }

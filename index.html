@@ -22,15 +22,31 @@
             <button>
                 <i class="far fa-times-circle" id="close-btn"></i>
             </button>
+
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit">
+                  <a href="#"><img src="img/search-icon.svg" alt="search"></a>
+              </button>
+            </form>
             <div id="nav-container">
                 <nav data-nav="main-navigation">
 
                     <ul>
-                        <li><a href="">link 1</a></li>
-                        <li><a href="">link 2</a></li>
-                        <li><a href="">link 2</a></li>
+                        <li><a href="#">PRODUCT</a></li>
+                        <li><a href="#">PRICING</a></li>
+                        <li><a href="#">FEATURES</a></li>
+                        <li><a href="#">BLOG</a></li>
                     </ul>
                 </nav>
+
+                <article>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
@@ -38,9 +54,13 @@
 
     <!-- burger icon -->
     <!-- The burger icon needs to be outside of the main tag if you are going to position fix it. -->
-    <button id="burger-icon" data-fixed="fixed-item">
-        <i class="fas fa-bars"></i>
-    </button>
+    <header>
+        <section>
+            <button id="burger-icon" data-fixed="fixed-item">
+                <i class="fas fa-bars"></i>
+            </button>
+        </section>
+    </header>
 
     <!--
     *************** Your website content goes here! ***************

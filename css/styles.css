@@ -352,7 +352,7 @@ main {
   background-color: #000;
   display: grid;
   grid-template-areas: ". off-canvas .";
-  grid-template-columns: 10px auto 10px;
+  grid-template-columns: 15px auto 15px;
   padding-top: 20px;
   width: 200px;
   /* If you need padding or margin on the off-canvas menu, please add it to this div */ }
@@ -428,15 +428,33 @@ textarea {
 a:hover,
 a:link {
   text-decoration: none;
-  transition: o 0.25s; }
+  transition: 0.25s; }
 
 #off-canvas-container {
   /* -------------
         Here are the properties you can changes for the off-canvas navigation-slide
     ------------- */
+  width: 340px;
   /* close btn */
   /* close btn */ }
-  #off-canvas-container button {
+  #off-canvas-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #off-canvas-container form input[type=text] {
+      background-color: #B4AB72;
+      font-size: 1.0625rem;
+      border: none;
+      height: 50px;
+      padding: 0px;
+      width: 80%;
+      padding-left: 5px; }
+    #off-canvas-container form button {
+      height: 50px;
+      background-color: #FF9041;
+      border: none;
+      width: 20%; }
+  #off-canvas-container div > button {
     background-color: transparent;
     border: none;
     color: #fff;
@@ -446,27 +464,49 @@ a:link {
     text-align: right;
     transition: 0.25s;
     width: 100%; }
-  #off-canvas-container ul li a:link,
-  #off-canvas-container ul li a:visited {
-    color: #fff; }
-  #off-canvas-container ul li a:active,
-  #off-canvas-container ul li a:hover {
-    color: #000; }
+  #off-canvas-container nav ul li {
+    text-align: right; }
+    #off-canvas-container nav ul li a:link,
+    #off-canvas-container nav ul li a:visited {
+      color: #fff;
+      font-size: 1.875rem;
+      font-weight: 700;
+      border-bottom: 2px solid #616950;
+      display: inline-block;
+      padding: 20px 0;
+      width: 100%; }
+    #off-canvas-container nav ul li a:active,
+    #off-canvas-container nav ul li a:hover {
+      color: #000;
+      background-color: #FF9041; }
+  #off-canvas-container article ul {
+    display: flex;
+    justify-content: flex-end; }
+    #off-canvas-container article ul li a:link, #off-canvas-container article ul li a:visited {
+      font-size: 1.5625rem;
+      padding: 15px 0 0 45px;
+      color: #fff;
+      display: inline-block; }
+    #off-canvas-container article ul li a:hover, #off-canvas-container article ul li a:active {
+      color: #FF9041; }
 
 #burger-icon {
-  background-color: #fff;
+  background-color: #FF9041;
+  color: #fff;
   border: none;
   font-size: 1.125rem;
   outline: none;
-  padding: 8px;
+  padding: 8px 10px;
+  border-radius: 110px;
+  border: 1px solid #000;
   position: fixed;
-  right: 20px;
+  left: 20px;
   top: 20px;
   z-index: 100; }
 
 #burger-icon:hover {
-  background-color: #000;
-  color: #fff; }
+  background-color: #26271F;
+  border: 1px solid #FF9041; }
 
 /* =============
     Header
