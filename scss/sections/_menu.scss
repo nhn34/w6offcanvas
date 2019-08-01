@@ -1,0 +1,59 @@
+/* =============
+    Menu
+============= */
+
+#menu {
+    div {
+
+        @include lg {
+            display: grid;
+            grid-template-columns: 100px auto 100px;
+            grid-template-areas:
+            "h1 h1 h1"
+            ". p .";
+        }
+
+        @include xl {
+            display: grid;
+            grid-template-columns: auto 1200px auto;
+            grid-template-areas:
+            "h1 h1 h1"
+            ". p .";
+        }
+
+
+    h1 {
+        font-weight: 300;
+        padding: 50px 0 30px;
+        text-align: center;
+        font-size: rem-calc(30);
+        @include md {
+            font-size: rem-calc(68);
+        }
+
+        @include lg {
+            grid-area: h1;
+            padding-top: 100px;
+        }
+        }
+
+
+
+    p {
+        font-weight: 300;
+        line-height: 30px;
+        padding-bottom: 50px;
+        @include md {
+            font-size: rem-calc(20);
+        }
+
+        @include lg {
+            grid-area: p;
+            font-size: rem-calc(31);
+            line-height: 70px;
+            padding-bottom: 100px;
+        }
+
+    }
+    }
+}

@@ -1,0 +1,57 @@
+/* =============
+    Gallery
+============= */
+
+#gallery {
+    padding-bottom: 50px;
+    ul {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "first"
+        "second"
+        "third";
+        grid-gap: 10px;
+
+        @include sm {
+            grid-template-columns: auto 550px auto;
+            grid-template-areas:
+            ". first ."
+            ". second ."
+            ". third .";
+        }
+
+        @include md {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+            "first first second second"
+            ". third third .";
+        }
+
+        @include lg {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+            "first second third";
+        }
+
+        li {
+            background-size: cover;
+            height: 300px;
+
+        }
+
+        li:nth-child(1) {
+            grid-area: first;
+            background-image: url("../img/left.jpg");
+        }
+        li:nth-child(2) {
+            grid-area: second;
+            background-image: url("../img/middle.jpg");
+        }
+        li:nth-child(3) {
+            grid-area: third;
+            background-image: url("../img/right.jpg");
+        }
+    }
+
+}
